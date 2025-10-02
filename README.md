@@ -7,6 +7,8 @@ Objectif : documenter mes raisonnements, garder une trace de mes solutions et pa
 
 [FR] : Voici le tableau récapitulatif des challenges.
 
+|TODO: SUPPRIMER LE FICHIER .obsidian|
+
 | Nom                                                                 | Catégorie           | Points |
 | ------------------------------------------------------------------- | ------------------- | ------ |
 | [Corrupted file](Forensics/Corrupted%20file.md)                     | Forensics           | 100    |
