@@ -6,16 +6,16 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "🕸",
+      "TiRobot",
+      "CoSearchMagnifyingGlass",
+      "LiBrain",
+      "🕵",
+      "LiBinary",
+      "TiLock",
       "SiLatex",
       "RaBrokenShield",
-      "SiTryhackme",
-      "TiCertificate",
-      "SiVuedotjs",
-      "SiReact",
-      "🕸",
-      "SiFastapi",
-      "SiHackthebox",
-      "TiSchool"
+      "SiTryhackme"
     ],
     "recentlyUsedIconsSize": 10,
     "rules": [],
@@ -77,5 +77,11 @@
   "Cheat sheets/Stabiliser un reverse shell.md": "SiShell",
   "Academy/Red Team Analyst": "TiCertificate",
   "Academy/Tryhackme": "SiTryhackme",
-  "Academy/Tryhackme/Red Teaming": "RaBrokenShield"
+  "Academy/Tryhackme/Red Teaming": "RaBrokenShield",
+  "Cryptography": "TiLock",
+  "Binary exploitation": "LiBinary",
+  "Forensics": "CoSearchMagnifyingGlass",
+  "General skills": "LiBrain",
+  "Reverse engineering": "TiRobot",
+  "Web exploitation": "🕸"
 }

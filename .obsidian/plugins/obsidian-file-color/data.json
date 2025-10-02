@@ -105,6 +105,14 @@
     {
       "path": "Academy/Tryhackme/Red Teaming",
       "color": "51WjO96IJ9MNJphAtIsJu"
+    },
+    {
+      "path": "Binary exploitation",
+      "color": "E5rkTytOHPPh3x9Anhm7d"
+    },
+    {
+      "path": "Web exploitation",
+      "color": "EOxpfpL1dujMsm4pyJSS5"
     }
   ]
 }
