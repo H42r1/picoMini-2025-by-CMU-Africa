@@ -1,4 +1,6 @@
-Category : Forensics
+Category: Forensics
+
+Points: 100
 
 Author: Yahaya Meddy
 ### Description

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Forensics/Hidden in plainsight.md",
+                "file": "Forensics/Riddle Registry.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hidden in plainsight"
+              "title": "Riddle Registry"
             }
           }
         ]
@@ -191,10 +191,12 @@
   },
   "active": "0991acc9c26b01be",
   "lastOpenFiles": [
-    "Forensics/Riddle Registry.md",
+    "Forensics/Hidden in plainsight.md",
     "Forensics/Flag in Flame.md",
     "Forensics/Corrupted file.md",
-    "Forensics/Hidden in plainsight.md",
+    "Template/CHALL_TEMP.md",
+    "Forensics/Riddle Registry.md",
+    "README.md",
     "Forensics/attachments/Pasted image 20251002111623.png",
     "Forensics/attachments/Pasted image 20251002111510.png",
     "Forensics/attachments/Pasted image 20251002111251.png",
@@ -205,9 +207,7 @@
     "Forensics/attachments/Pasted image 20251002105527.png",
     "Forensics/attachments/Pasted image 20251002104957.png",
     "Forensics/attachments/Pasted image 20251002104710.png",
-    "Template/CHALL_TEMP.md",
     "Template",
-    "README.md",
     "Reverse engineering/Pico Bank.md",
     "Reverse engineering/M1n10n'5_53cr37.md",
     "Web exploitation/byp4ss3d.md",

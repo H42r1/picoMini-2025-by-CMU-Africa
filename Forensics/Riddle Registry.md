@@ -1,4 +1,6 @@
-Category : Forensics
+Category: Forensics
+
+Points: 50
 
 Author: Prince Niyonshuti N.
 ### Description
