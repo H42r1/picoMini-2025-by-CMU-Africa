@@ -31,3 +31,5 @@ La dernière étape est le décodage. Nous utiliserons [dcode](https://www.dcode
 Décodons la chaîne pour obtenir le flag :
 
 ![](attachments/Pasted%20image%2020251002110345.png)
+
+GG!

@@ -19,3 +19,5 @@ On commence le challenge avec un fichier pdf. Étant donné que le challenge est
 ![](attachments/Pasted%20image%2020251002093217.png)
 
 On constate que la valeur de `Author` est encodée en base64. En utilisant les outils de décodage en ligne comme [dcode](https://www.dcode.fr/code-base-64) ou [cyberchef](https://cyberchef.org), on obtient le flag en clair: `picoCTF{REDACTED}`.
+
+GG!
