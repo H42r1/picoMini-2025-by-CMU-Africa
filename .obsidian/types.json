@@ -1,0 +1,13 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "Date du début": "datetime",
+    "Date du pwn": "datetime",
+    "Difficulté": "text",
+    "Text": "text",
+    "Start date": "datetime",
+    "Date": "datetime"
+  }
+}
