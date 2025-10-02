@@ -89,7 +89,7 @@ Syntaxe: `find <Dossier_d'extraction> -name <motif> 2>/dev/null`
 ![](attachments/Pasted%20image%2020251002130348.png)
 
 L'OTP doit sûrement se trouver dans le fichier `OTP.java` (jpp).
-Après analyse du code `OTP.java`, on constate que la valeur de l'OTP est stockée sous la clé `otp_value` codée en dur dans `res/values/strings.xml` et doit être soumise dans une requête POST vers `/verify-otp` pour obtenir le flag. 
+Après analyse du code `OTP.java`, on constate que la valeur de l'OTP est stockée sous la clé `otp_value` codée en dur dans `res/values/strings.xml` et doit être soumise dans une requête POST vers `/verify-otp` pour qu'on puisse obtenir le flag. 
 
 ![](attachments/Pasted%20image%2020251002131408.png)
 
@@ -97,7 +97,7 @@ En réalité, l'application ne communique pas directement avec un serveur. On va
 
 Réponse: Nous utiliserons le serveur de l'application fourni par le challenge.
 
-Avec `curl`, on soumet l'OTP avec une requête `POST` au serveur du l'app où nous avons télécharger l'apk.
+Avec `curl`, on soumet l'OTP avec une requête `POST` au serveur de l'app où nous avons télécharger l'apk.
 
 ```sh
 curl -X POST http://<SNIP>/verify-otp -H "Content-Type: application/json" -d '{"otp":"<OTP_VALUE>"}'
@@ -106,11 +106,11 @@ curl -X POST http://<SNIP>/verify-otp -H "Content-Type: application/json" -d '{"
 
 ![](attachments/Pasted%20image%2020251002132303.png)
 
-Nous avons obtenu une partie du flag. Le hint nous fait comprendre que l'autre partie est au niveau de l'application. Après avoir mis l'OTP au niveau de l'application, on arrive sur un dashboard.
+Nous avons obtenu une partie du flag. Le hint nous fait comprendre que l'autre partie est au niveau de l'application mobile. Après avoir entrer l'OTP, on arrive sur un dashboard.
 
 ![](attachments/Pasted%20image%2020251002132852.png)
 
-Ici, on comprends vite que l'autre partie du flag est encodé au niveau des prix des transactions bancaires.
+Ici, on comprends vite que l'autre partie du flag est encodé au niveau des valeurs des transactions financières.
 Nous irons une dernière fois dans le code source pour accéder plus facilement aux valeurs des transactions financières de `Johnson`.
 
 ![](attachments/Pasted%20image%2020251002133145.png)
