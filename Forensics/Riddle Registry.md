@@ -6,6 +6,7 @@ Hi, intrepid investigator! 📄🔍 You've stumbled upon a peculiar PDF filled w
 ---
 ##### Hints
 1: Don't be fooled by the visible text; it’s just a decoy!
+
 2: Look beyond the surface for hidden clues
 
 ---
@@ -14,4 +15,4 @@ On commence le challenge avec un fichier pdf. Étant donné que le challenge est
 
 ![](attachments/Pasted%20image%2020251002093217.png)
 
-On constate que la valeur de `Author` est encodée en base64. En utilisant les outils de décodage en ligne comme [dcode](https://www.dcode.fr/code-base-64) ou [cyberchef](https://cyberchef.org/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false), on obtient le flag en clair: `picoCTF{REDACTED}`.
+On constate que la valeur de `Author` est encodée en base64. En utilisant les outils de décodage en ligne comme [dcode](https://www.dcode.fr/code-base-64) ou [cyberchef](https://cyberchef.org), on obtient le flag en clair: `picoCTF{REDACTED}`.

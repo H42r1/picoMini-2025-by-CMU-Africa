@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reverse engineering/Pico Bank.md",
+                "file": "Forensics/Riddle Registry.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pico Bank"
+              "title": "Riddle Registry"
             }
           }
         ]
@@ -189,10 +189,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "9e87a11f8f32991c",
+  "active": "0991acc9c26b01be",
   "lastOpenFiles": [
-    "Reverse engineering/M1n10n'5_53cr37.md",
     "Reverse engineering/Pico Bank.md",
+    "Reverse engineering/M1n10n'5_53cr37.md",
     "Web exploitation/byp4ss3d.md",
     "Web exploitation/Crack the Gate 2.md",
     "Web exploitation/Crack the Gate 1.md",
