@@ -8,10 +8,12 @@ Objectif : documenter mes raisonnements, garder une trace de mes solutions et pa
 **Membres**:
 
 [H42r1](https://www.linkedin.com/in/harry-yete-4451b72a5/)
+
 [Felix090506](https://www.linkedin.com/in/f%C3%A9lix-omichessan-446b41332/)
+
 [Elshson](https://www.linkedin.com/in/elshson-ogoubiyi-462015350/)
 
-**Rang**: 32th (Peut mieux faire...)
+**Rang**: 32th (Peuvent mieux faire...)
 
 **Total : 13 challenges**
 
