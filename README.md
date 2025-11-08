@@ -2,21 +2,19 @@
 
 ![](attachments/Pasted%20image%2020251012164644.png)
 
-Ce repo compile les write-ups de la team **M4GIK** pour les challenges du **picoMini 2025**. 
-Objectif : documenter nos raisonnements, garder une trace de nos solutions et partager avec les autres joueurs.
+This repository holds the write-ups of the team **M4GIK** for the **picoMini 2025**. 
 
-**Membres**:
+**Members**:
 
 [H42r1](https://www.linkedin.com/in/harry-yete-4451b72a5/)
 [Felix090506](https://www.linkedin.com/in/f%C3%A9lix-omichessan-446b41332/)
 [Elshson](https://www.linkedin.com/in/elshson-ogoubiyi-462015350/)
 
-**Rang**: 32th (Peuvent mieux faire...)
+**Rang**: 32th (Meh...)
 
 **Total : 13 challenges**
 
-[FR] : Voici le tableau récapitulatif des challenges.
-[EN] : Coming soon...
+Here is the list of the challs.
 
 | Nom                                                                 | Catégorie           | Points |
 | ------------------------------------------------------------------- | ------------------- | ------ |

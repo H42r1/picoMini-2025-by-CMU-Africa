@@ -14,13 +14,13 @@ Our server seems to be leaking pieces of a secret flag in its logs. The parts ar
 
 ---
 ### Solution
-Comme le suggère le hint, nous pouvons utiliser `grep`. Nous pouvons aussi utiliser un editeur de text random avec `Ctrl+F` et c'est bon. Nous utiliserons `grep`.
+As the hint suggests, we can use `grep`. We could also open a random text editor and hit `Ctrl+F` , that would work. We'll use `grep`.
 
-En vérifiant les dix premières lignes du fichier, on constate que le fichier contient les parties du flag en clair avec comme préfixe : `FLAGPART`.
+Checking the first ten lines of the file, we see that the file contains the flag parts in cleartext, each prefixed with `FLAGPART`.
 
 ![](attachments/Pasted%20image%2020251002113634.png)
 
-Faisons donc `grep FLAGPART server.log`.
+So let's run`grep FLAGPART server.log`.
 
 ![](attachments/Pasted%20image%2020251002113828.png)
 

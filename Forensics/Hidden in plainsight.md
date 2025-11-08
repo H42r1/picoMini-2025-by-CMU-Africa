@@ -16,17 +16,17 @@ Nous allons faire ce que suggère l'indice en utilisant `exiftool`.
 
 ![](attachments/Pasted%20image%2020251002110705.png)
 
-La valeur de `Comment` attire notre attention. Il s'agit d'une chaîne encodée en `base64`.
+The value of `Comment` attracts our attention. This is a `base64` encoded string.
 
-Chaîne décodée : `steghide:cEF6endvcmQ=`. `cEF6endvcmQ=` est aussi en `base64`
+Decoded string: `steghide:cEF6endvcmQ=`. `cEF6endvcmQ=` is also in `base64`
 
-Chaîne décodée : `pAzzword`
+Decoded string: `pAzzword`
 
-Dernière ligne droite. Utilisons `steghide` avec la passphrase que nous avons obtenu.
+Let's use `steghide` with the passphrase we obtained.
 
 ![](attachments/Pasted%20image%2020251002111251.png)
 
-Lisons le contenu du fichier extrait :
+Let's read the contents of the extracted file:
 
 ![](attachments/Pasted%20image%2020251002111623.png)
 

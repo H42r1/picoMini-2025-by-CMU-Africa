@@ -12,23 +12,23 @@ Use `base64` to decode the data and generate the image file.
 
 ---
 ### Solution
-L'indice résout tout seul challenge mdr. Utilisons `base64` pour décoder l'image.
+The clue solves the challenge by itself lol. Let's use `base64` to decode the image.
 
 ![](attachments/Pasted%20image%2020251002105527.png)
 
-On obtient une image sur laquelle il y a une chaîne de caractères encodée en hexadécimale.
+We obtain an image on which there is an ASCII string.
 
 ![](attachments/Pasted%20image%2020251002105647.png)
 
-En utilisant [Image to text](https://www.imagetotext.info/), on arrive à extraire le texte assez facilement de l'image.
+By using [Image to text](https://www.imagetotext.info/), we can extract the text quite easily from the image.
 
 `7069636F4354467B666F72656E736963735F616E616C797369735F69735F616D617A696E675F35646161346132667D`
 
-La dernière étape est le décodage. Nous utiliserons [dcode](https://www.dcode.fr). Après analyse, on constate que cette chaîne est de l'ASCII.
+The last step is decoding. We will use [dcode](https://www.dcode.fr). After analysis, we see that this string is ASCII.
 
 ![](attachments/Pasted%20image%2020251002110211.png)
 
-Décodons la chaîne pour obtenir le flag :
+Let's decode the string to obtain the flag:
 
 ![](attachments/Pasted%20image%2020251002110345.png)
 

@@ -22,82 +22,63 @@ Additional details will be available after launching your challenge instance.
 
 ---
 ### Solution
-Il y a beaucoup d'informations. C'est mon chall préféré de la compétition.
-Nous avons accès à une app web à partir de laquelle nous pouvons télécharger un fichier APK.
+There is a lot of information. This is my favorite challenge from the competition.
+We have access to a web app from which we can download an APK file.
 
 ![](attachments/Pasted%20image%2020251002122758.png)
 
-Nous téléchargeons le fichier apk et l'exécutons avec [Android Studio](https://developer.android.com/studio).
-Pour apprendre à installer et rooter l'émulateur, nous pouvons suivre la vidéo du Youtuber [UnderSecured](https://youtu.be/QzsNn3GhYYk?si=lLbQxnRHPemhOsnx).
-Après avoir installé le fichier apk: 
+We download the apk file and run it with [Android Studio](https://developer.android.com/studio).
+To learn how to install and root the emulator, we can follow the Youtuber's video[UnderSecured](https://youtu.be/QzsNn3GhYYk?si=lLbQxnRHPemhOsnx).
+After installing the apk file:
 
 ![](attachments/Pasted%20image%2020251002123038.png)
 
-Après avoir lancer l'app:
+After launching the app:
 
 ![](attachments/Pasted%20image%2020251002123113.png)
 
-Nous somme confrontés à un formulaire où il n'y a pas la possibilité de créer un compte. Nous allons devoir chercher les identifiants dans le code source de l'app.
+We are faced with a form where there is no possibility of creating an account. We will have to look for the identifiers in the source code of the app.
 
-Pour ce faire, nous pouvons utiliser `jadx` ou `apktool` pour désassembler l'apk et rechercher la variable les identifiants avec grep et les infos trouvées dans la description du chall. La différence entre `jadx` et `apktool` :
+To do this we can use `jadx` or `apktool` to disassemble the apk and search for the variable identifiers with grep and the info found in the chall description. The difference between `jadx` and `apktool` :
 
-- **`jadx`** → décompile en **Java lisible** (idéal pour lire la logique rapidement).
+- **`jadx`** → decompiles to **readable Java** (ideal for reading logic quickly).
     
-- **`apktool`** → décompile en **smali + ressources** (idéal pour patcher/reconstruire, et pour voir des détails bas-niveau).
+- **`apktool`** → decompiles to **smali + resources** (ideal for patching/rebuilding, and for seeing low-level details).
 
 
-Nous utiliserons `jadx`. 
+We will use `jadx`. 
 
 ![](attachments/Pasted%20image%2020251002123636.png)
 
-Syntaxe: `jadx -d $HOME/extracted $HOME/pico-bank.apk
+Syntax: `jadx -d $HOME/extracted $HOME/pico-bank.apk
 
-- `-d $HOME/extracted`  
-    `-d` = _directory_ de sortie. Ici on dit « écris la sortie dans `~/extracted` ». `$HOME` est la variable d’environnement qui pointe vers notre dossier personnel (ex : `/home/kali).
-    
-- `$HOME/pico-bank.apk  
-    Le chemin vers l’APK à analyser (ici `~/pico-bank.apk`). Jadx lit ce fichier en entrée.
-
-La prochaine étape est de rechercher les identifiants de `Alex Johnson` dans le code source avec grep.
+The next step is to search the source code for `Alex Johnson` creds with grep.
 
 ![](attachments/Pasted%20image%2020251002124350.png)
 
-Bingo! Les identifiants se trouvent dans le fichier `Login.java` (Héhé... Logique). 
+Bingo! The identifiers are found in the `Login.java` file (Hehe... Logical).
 
-Après avoir soumis les identifiants dans le formulaire de connexion, on se retrouve face à une page où il faut entrer un `OTP`.
+After submitting the credentials in the connection form, we find ourselves faced with a page where we must enter an `OTP`.
 
 ![](attachments/Pasted%20image%2020251002124716.png)
 
-Cherchons l'OTP dans le code source avec `find` cette fois-ci parce que les identifiants ont eux été trouvés dans un fichier au nom assez explicite XD.
+Let's look for the OTP in the source code with `find` this time because the identifiers were found in a file with a fairly explicit name XD.
 
-Syntaxe: `find <Dossier_d'extraction> -name <motif> 2>/dev/null`
-
-- `<Dossier_d'extraction>`  
-    Point d’entrée où `find` commence la recherche (ex : `~/extracted` ou `./apktool-out`).
-    
-- `-name <motif>`  
-    Filtre sur le **nom** du fichier (ou du répertoire). `<motif>` utilise des **globs** shell (wildcards), pas des regex.  
-    Exemples de motifs :
-    
-    - `*otp*` → tous les fichiers contenant le motif `otp`
-    
-- `2>/dev/null`  
-    Redirige la **sortie d’erreur** (stderr, descripteur `2`) vers `/dev/null` (la poubelle).  
-    Ça supprime les messages du type `Permission denied` ou autres erreurs d’accès — pratique quand tu fouilles des arbores larges sans vouloir spam d’erreurs.
+Syntax: `find <Dossier_d'extraction> -name <motif> 2>/dev/null`
 
 
 ![](attachments/Pasted%20image%2020251002130348.png)
 
-L'OTP doit sûrement se trouver dans le fichier `OTP.java` (jpp).
-Après analyse du code `OTP.java`, on constate que la valeur de l'OTP est stockée sous la clé `otp_value` codée en dur dans `res/values/strings.xml` et doit être soumise dans une requête POST vers `/verify-otp` pour qu'on puisse obtenir le flag. 
+The OTP must surely be in the `OTP.java` (jpp) file.
+After analyzing the `OTP.java` code, we see that the OTP value is stored under the hardcoded `otp_value` key in `res/values/strings.xml` and must be submitted in a POST request to `/verify-otp` so that we can obtain the flag.
 
 ![](attachments/Pasted%20image%2020251002131408.png)
 
-En réalité, l'application ne communique pas directement avec un serveur. On va devoir faire la requête vers le serveur à la main. Mais une question persiste. Quel serveur ?
+In reality, the application does not communicate directly with a server. We will have to make the request to the server by hand. But a question remains. Which server?
 
-Réponse: Nous utiliserons le serveur de l'application fourni par le challenge.
+Answer: We will use the application server provided by the challenge.
 
-Avec `curl`, on soumet l'OTP avec une requête `POST` au serveur de l'app où nous avons télécharger l'apk.
+With `curl`, we submit the OTP with a `POST` request to the app server where we downloaded the apk.
 
 ```sh
 curl -X POST http://<SNIP>/verify-otp -H "Content-Type: application/json" -d '{"otp":"<OTP_VALUE>"}'
@@ -106,25 +87,26 @@ curl -X POST http://<SNIP>/verify-otp -H "Content-Type: application/json" -d '{"
 
 ![](attachments/Pasted%20image%2020251002132303.png)
 
-Nous avons obtenu une partie du flag. Le hint nous fait comprendre que l'autre partie est au niveau de l'application mobile. Après avoir entrer l'OTP, on arrive sur un dashboard.
+We got part of the flag. The hint makes us understand that the other party is at the mobile application level. After entering the OTP, you arrive on a dashboard.
 
 ![](attachments/Pasted%20image%2020251002132852.png)
 
-Ici, on comprends vite que l'autre partie du flag est encodé au niveau des valeurs des transactions financières.
-Nous irons une dernière fois dans le code source pour accéder plus facilement aux valeurs des transactions financières de `Johnson`.
+Here, we quickly understand that the other part of the flag is encoded at the level of the values ​​of financial transactions.
+We will go one last time into the source code to more easily access the values ​​of `Johnson`'s financial transactions.
 
 ![](attachments/Pasted%20image%2020251002133145.png)
 
-Elles se trouvent donc dans le fichier: `extracted/sources/com/example/picobank/MainActivity.java`
+They are therefore in the file:
+`extracted/sources/com/example/picobank/MainActivity.java`
 
 ![](attachments/Pasted%20image%2020251002133318.png)
 
-C'est de l'ASCII évidement mais c'est à partir de la transaction : `Car Maintenance` que ça se complique parce que sa valeur à moins de bits que les autres. Pour combler ça, `il suffit d'ajouter un zéro devant`.
+It's obviously ASCII but it's from the transaction: `Car Maintenance` that it gets complicated because its value has fewer bits than the others. To fill that, `just add a zero in front`.
 
 Exemple: 
 
 **110001 devient 0110001**
 
-On fait la même chose pour toutes les transactions à `6 bits` et on est bon. Nous pouvons aussi nous aider de scripts pour automatiser tout ça (Ce que j'ai fait).
+We do the same thing for all `6-bit` transactions and we are good. We can also use scripts to automate all of this (which I did).
 
 GG!

@@ -14,10 +14,10 @@ Hi, intrepid investigator! 📄🔍 You've stumbled upon a peculiar PDF filled w
 
 ---
 ### Solution
-On commence le challenge avec un fichier pdf. Étant donné que le challenge est de type forensics, le premier réflexe à avoir est de vérifier les métadonnées du fichier. Pour ce faire, nous utiliserons l'app`exiftool`.
+We start the challenge with a pdf file. Since the challenge is forensics, the first instinct to have is to check the file metadata. To do this, we will use the app`exiftool`.
 
 ![](attachments/Pasted%20image%2020251002093217.png)
 
-On constate que la valeur de `Author` est encodée en base64. En utilisant les outils de décodage en ligne comme [dcode](https://www.dcode.fr/code-base-64) ou [cyberchef](https://cyberchef.org), on obtient le flag en clair: `picoCTF{REDACTED}`.
+We see that the value of `Author` is base64 encoded. By using online decoding tools like [dcode](https://www.dcode.fr/code-base-64) or [cyberchef](https://cyberchef.org), we obtain the flag: `picoCTF{REDACTED}`.
 
 GG!
