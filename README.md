@@ -16,7 +16,7 @@ This repository holds the write-ups of the team **M4GIK** for the **picoMini 202
 
 Here is the list of the challs.
 
-| Nom                                                                 | Catégorie           | Points |
+| Name                                                                | Category            | Points |
 | ------------------------------------------------------------------- | ------------------- | ------ |
 | [Corrupted file](Forensics/Corrupted%20file.md)                     | Forensics           | 100    |
 | [Flag in Flame](Forensics/Flag%20in%20Flame.md)                     | Forensics           | 100    |
