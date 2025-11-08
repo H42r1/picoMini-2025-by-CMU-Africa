@@ -10,7 +10,7 @@ This repository holds the write-ups of the team **M4GIK** for the **picoMini 202
 [Felix090506](https://www.linkedin.com/in/f%C3%A9lix-omichessan-446b41332/)
 [Elshson](https://www.linkedin.com/in/elshson-ogoubiyi-462015350/)
 
-**Rang**: 32th (Meh...)
+**Rank**: 32th (Meh...)
 
 **Total : 13 challenges**
 
